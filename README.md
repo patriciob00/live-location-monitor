@@ -17,13 +17,11 @@ after you start running this project, have sure that follow these steps:
 
 after downloading or cloning this repo, execute the command below
 
-```
-npm install ```           
+`npm install`
   
 or 
 
-```
-yarn install```  
+`yarn install`
 
 
 after download and install all the dependencies, do the following:
