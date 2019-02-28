@@ -13,9 +13,11 @@ A tool that finds services to you
 
 after you start running this project, have sure that follow these steps:
 
-**install**
+* Node version:
+  
+  to run this project, have sure that you have Node v10.11.0 or higher installed on your machine.
 
-after downloading or cloning this repo, execute the command below
+* after downloading or cloning this repo, execute the command below
 
 `npm install`
   
