@@ -1,0 +1,55 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/colors';
+
+
+.loading-modal {
+  background-color: rgba($c-white, 0.8 );
+  display: flex!important;
+  justify-content: center;
+
+  .loading-content {
+    border: none;
+    width: fit-content!important;
+    max-width: 80%;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+
+    .loader-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      .loader-section {
+        margin: 10px;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        box-shadow: -2px 2px 1px rgba($c-black, 0.3);
+
+        .loader {
+          width: calc( 100% - 50px);
+          height: calc( 100% - 50px);
+          border-radius: 50%;
+          border: 25px solid rgba($c-dark-gray, 0.3 );
+          border-left: 25px solid rgba($c-dark-gray, 0.6 );
+          animation: spin 2s ease-in-out infinite;
+        }
+      }
+
+      .info-section {
+        margin-top: 20px;
+        color: rgba($c-dark-gray, 0.6 );
+        text-shadow: -1px 1px 1px rgba($c-black, 0.3);
+        font-size: 1.8em;
+        font-weight: bold; 
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg)}
+}

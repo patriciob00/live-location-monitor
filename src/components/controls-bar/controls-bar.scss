@@ -1,0 +1,11 @@
+.controls-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-height: 400px;
+  height: fit-content;
+}

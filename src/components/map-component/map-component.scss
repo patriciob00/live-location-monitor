@@ -1,0 +1,24 @@
+@import '../../assets/scss/colors';
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  .tag-popup {
+
+    &.not {
+      .tag-available {
+        color: $c-red
+      }
+    }
+    .tag-text {
+      margin-bottom: 5px;
+      font-weight: 400
+    }
+
+    .tag-available {
+      color: $c-green;
+    }
+  }
+}

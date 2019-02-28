@@ -1,0 +1,42 @@
+@import '../../assets/scss/colors';
+@import '../../assets//scss/mixins';
+
+.body-wrapper {
+
+  &.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .close-wrapper {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+
+      svg {
+        width: 30px;
+        fill: $c-red!important;
+      }
+    }
+
+    .icon-wrapper {
+      display: flex;
+      margin: 10px;
+
+      svg {
+        width: 90px;
+        fill: $c-dark-gray!important
+      }
+    }
+
+    .not-found-message {
+      margin: 10px;
+      font-size: 1.5em;
+      max-width: 300px;
+      font-weight: bold;
+      color: $c-dark-gray
+    }
+  }
+}

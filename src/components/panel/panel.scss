@@ -1,0 +1,30 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/colors';
+
+.panel-custom {
+  margin: 10px 0px;
+  .panel-header {
+    height: fit-content;
+    padding: 15px;
+    background-color: $c-sweet-blue;
+    font-size: 1.4em;
+    border-radius: 6px;
+    color: $c-white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .panel-body {
+    padding: 15px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: height .5s ease .3s, opacity .3s ease;
+
+    &.open {
+      opacity: 1;
+      height: 70px;
+      transition: height .4s ease, opacity .4s ease .4s;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
+.location-wrapper {
+    z-index: 2;
+    margin-bottom: 20px;
+    width: fit-content;
+    height: 40px;
+    position: relative;
+
+    &.disabled {
+      .location-header {
+        opacity: .6;
+        cursor: not-allowed
+      }
+
+      .locations-list-block {
+        opacity: 0;
+      }
+    }
+
+  .location-header {
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    border: 2px solid $c-red;
+    background-color: $c-light-red;
+    display: flex;
+    align-items: center;
+    @include boxShadow;
+    transition: width .5s ease;
+
+    svg {
+      width: calc( 100% - 5px );
+      max-width: 40px;
+      fill: $c-red!important;
+    }
+  }
+
+  .locations-list-block {
+    z-index: 1;
+    position: absolute;
+    @include boxShadow;
+    background-color: $c-white;
+
+    width: 35px;
+    height: 35px;
+    max-height: 35px;
+    left: 5px;
+    top: 0px;
+    border-radius: 35px;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    padding: 0px;
+    transition: left .3s ease .3s, width .3s ease, height .3s ease, max-height .3s ease, border-radius .3s ease;
+
+    .pin-points {
+      opacity: 0;
+    }
+
+    &.opened {
+      left: 60px;
+      width: 270px;
+      padding: 5px;
+      height: fit-content;
+      max-height: 200px;
+      border-radius: 5px;
+      overflow-y: auto;
+      overflow-x: hidden; 
+      transition: left .3s ease, width .3s ease .3s, height .3s ease .6s, max-height .3s ease .6s, border-radius .2s ease .3s, padding .2s ease .6s;
+
+      &::-webkit-scrollbar { width: 0px }
+
+      .pin-points {
+        position: relative;
+        cursor: pointer;
+        height: 50px;
+        width: calc( 100% - 22px );
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        justify-content: flex-start;
+        border-radius: 3px;
+        margin-left: 2px;
+        color: $c-red;
+        opacity: 1;
+        transition: background-color .2s ease, margin-left .2s ease, opacity .1s ease .7s;
+
+        &.available {
+          color: $c-green;
+
+          &.selected {
+            background-color: $c-light-green;
+
+            .selected-star {
+              position: absolute;
+              bottom: 5px;
+              right: 5px;
+
+              svg {
+                fill: $c-green;
+                width: 10px;
+                margin: 0px!important
+              }
+            }
+          }
+
+          &:hover {
+            background-color: $c-light-green;  
+          }
+
+          svg {
+            fill: $c-green!important
+          }
+        }
+
+        &.selected {
+          background-color: $c-lightest-red;
+
+          .selected-star {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            
+            svg {
+              fill: $c-red;
+              width: 10px;
+              margin: 0px!important
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $c-lightest-red;
+          @include boxShadow;
+        }
+        
+        svg {
+          margin-right: 10px;
+          width: 30px;
+          fill: $c-red!important;
+        }
+
+        .info {
+          font-size: 14px;
+          width: calc( 100% - 70px );
+
+          div {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        .delete-section {
+          width: 20px;
+          height: fit-content;
+          border-radius: 2px;
+          margin-left: 10px;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+
+          &:hover {
+            svg { fill: $c-red!important }
+          }
+
+          svg {
+            fill: $c-dark-gray!important;
+            width: 20px!important;
+          }
+        }
+      }
+    }
+  }
+}

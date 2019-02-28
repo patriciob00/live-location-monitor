@@ -1,0 +1,17 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
+.help-btn {
+  z-index: 2;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 100%;
+  background-color: $c-light-blue;
+  margin-bottom: 20px;
+  @include boxShadow;
+  cursor: pointer;
+
+  svg {
+    fill: $c-blue!important;
+  }
+}
