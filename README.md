@@ -15,7 +15,7 @@ after you start running this project, have sure that follow these steps:
 
 * Node version:
   
-  to run this project, have sure that you have Node v10.11.0 or higher installed on your machine.
+  to run this project, have sure that you have Node **v10.11.0** or higher installed on your machine.
 
 * after downloading or cloning this repo, execute the command below
 
